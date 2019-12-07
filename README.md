@@ -1,4 +1,4 @@
-# ConsultingPlatform
+# ResoluGroupeConsultingPlatform
 
 Ce travail est travaillé au sein de la societe MSDEV par Bouchelliga Jalel .
 
