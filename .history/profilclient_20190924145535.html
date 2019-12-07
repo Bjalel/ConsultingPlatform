@@ -1,0 +1,320 @@
+
+<!DOCTYPE html>
+<html ng-app="myApp" lang="en" >
+<head>
+        <title>profileClient</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+
+
+        <style>
+          .container0{
+              display: grid ;
+              grid-template-columns: auto auto auto auto;     
+              grid-gap: 5mm;
+          }
+        </style>
+    <script src="lib/angular.js"> </script>
+    <script src="js/controllers.js"> </script>
+</head>
+<body ng-controller="MyController">
+ 
+<!-- Navbar -->
+
+
+      
+      <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>    
+          </ul>
+        </div>  
+      </nav>
+
+
+<!-- Navbar -->
+
+
+
+      <div class="container bootstrap snippet" style="margin-top:50px" >
+
+        <!-- left SIDEBAR-->
+            <div class="row">
+                  <div class="col-sm-10"><h1>Welcome</h1></div>
+                <div class="col-sm-2"><a href="/users" class="pull-right"><img title="profile image" class="img-circle img-responsive" src="/images/lawyer_1.jpg" height="70" width="70"></a></div>
+            </div>
+            <div class="row">
+                  <div class="col-sm-3"><!--left col-->
+                
+                    
+
+                <ul class="list-group">
+                    <li class="list-group-item text-muted"><b>Profil</b></li>
+                    <li class="list-group-item text-muted" > <h2>houssem jraidi</h2></li>
+                    <li class="list-group-item text-muted"> <p><i class="fa fa-pencil fa-fw w3-margin-right w3-text-theme"></i> <h4>jhoussemm@gmail.com</h4></p></li>
+                    <li class="list-group-item text-muted"><p><i class="fa fa-home fa-fw w3-margin-right w3-text-theme"></i> <h4>ariana</h4></p></li>
+                    <li class="list-group-item text-muted"><p><i class="fa fa-birthday-cake fa-fw w3-margin-right w3-text-theme"></i> <h4>male</h4></p></li>
+                </ul>
+               <a href="#settings" data-toggle="tab">Modifier profil</a>
+
+          <!-- left SIDEBAR-->
+          
+          
+               <h2 ></h2>
+                  
+                </div><!--/col-3-->
+                <div class="col-sm-9">
+                  
+                  <ul class="nav nav-tabs" id="myTab">
+                    <li class="active"><a href="#home" data-toggle="tab">Home</a></li>
+                    <li><a href="#formulaire" data-toggle="tab">formulaire</a></li>
+                    <li><a href="#demandes" data-toggle="tab">Expert</a></li>
+                    <li><a href="#formulaire1" data-toggle="tab">formulaire</a></li>
+
+                  </ul>
+                  <div class="tab-content">
+                  <div class="tab-pane active" id="home">
+                
+
+                    
+                  </div>
+                  
+                  
+                  
+                  <div class="row">
+                        <div class="col-md-4 col-md-offset-4 text-center">
+                            <ul class="pagination" id="myPager"></ul>
+                        </div>
+                      </div>
+                      
+                        
+        
+        
+        
+                        
+        
+                    <div class="tab-pane" id="formulaire1" >
+                        <div class="container" style="width:100%" >
+
+                                        <div class="col-lg-12">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <h2 align="center">Destinataire  : <b >{{dest}}</b></h2>
+                                                        <br>
+                                                        <h4 class="card-title"><b>Sujet de la demande</b></h4>
+                                                        <div class="basic-form">
+                                                            <form>
+                                                                <div class="form-group">
+                                                                    <input type="text" class="form-control input-default" placeholder="Sujet">
+                                                                </div>
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                
+                                    <div class="col-lg-12">
+                                                <div class="card">
+                                                    <div class="card-body">
+                                                        <h4 class="card-title"><b>Coordonées</b></h4>
+                                                        <div class="basic-form">
+                                                            <form>
+                                                                <div class="row">
+                                                                    <div class="col">
+                                                                        <input type="text" class="form-control" placeholder="Nom">
+                                                                      </div>
+                                                                      <div class="col">
+                                                                        <input type="text" class="form-control" placeholder="Prénom">
+                                                                    </div>
+                                                                </div>
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                        </div>
+                
+                                    <div class="col-lg-12">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <h4 class="card-title"><b>Description </b></h4>
+                                                <div class="basic-form">
+                                                    <form>
+                                                        <div class="form-group">
+                                                            
+                                                            <textarea class="form-control h-150px" rows="6" id="comment"></textarea>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                
+                
+                                    <div class="col-lg-12">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <h4 class="card-title"><b>Joindre un fichier</b></h4>
+                                                <div class="basic-form">
+                                                    <form>
+                                                        <div class="form-group">
+                                                            <input type="file" class="form-control-file">
+                                                            <p align="right" >
+                                                                    <button class="btn btn-success" ><b>Envoyer</b></button>
+                                                                  </p>
+                                                        </div>
+                                                        
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                
+                
+                               
+                        </div>
+                       
+                        
+                           
+
+                    </div><!--/formulaire-->
+                    <div class="tab-pane" id="demandes" name="demandes">
+                        <div class="container0" >
+                            <div ng-repeat="item in expert">
+                                <h2 style="text-align:center" >Profile Card</h2>
+                
+                                <div class="card" >
+                                  <img ng-src="img/{{item.imageName}}"alt="{{item.imageName}}"  width="200" height="300" class="img-responsive img-circle">
+                                  <h1>{{item.name}}</h1>
+                                  <p class="title">CEO & Founder, Example</p>
+                                  <p>Harvard University</p>
+                                  <div style="margin: 24px 0;">
+                                    <a href="#"><i class="fa fa-dribbble"></i></a> 
+                                    <a href="#"><i class="fa fa-twitter"></i></a>  
+                                    <a href="#"><i class="fa fa-linkedin"></i></a>  
+                                    <a href="#"><i class="fa fa-facebook"></i></a> 
+                                  </div>
+                                  <p><button ng-click="fonction(item.name)">Contact</button></p>
+                                </div>
+                
+                             </div>
+                             <script>
+                              function fonction(names) {
+                                document.getElementById("demandes").innerHTML = names;
+                              }
+                              </script> 
+
+                        </div>                                  
+                    </div><!--/demandes-->
+                            
+
+
+
+
+
+                     <div class="tab-pane" id="settings">
+                               
+                              
+                             
+                             <form class="form" action="##" method="post" id="registrationForm">
+                                 <div class="form-group">
+                                     
+                                     <div class="col-xs-6">
+                                         <label for="first_name"><h4>First name</h4></label>
+                                         <input type="text" class="form-control" name="first_name" id="first_name" placeholder="first name" title="enter your first name if any.">
+                                     </div>
+                                 </div>
+                                 <div class="form-group">
+                                     
+                                     <div class="col-xs-6">
+                                       <label for="last_name"><h4>Last name</h4></label>
+                                         <input type="text" class="form-control" name="last_name" id="last_name" placeholder="last name" title="enter your last name if any.">
+                                     </div>
+                                 </div>
+                     
+                                 <div class="form-group">
+                                     
+                                     <div class="col-xs-6">
+                                         <label for="phone"><h4>Phone</h4></label>
+                                         <input type="text" class="form-control" name="phone" id="phone" placeholder="enter phone" title="enter your phone number if any.">
+                                     </div>
+                                 </div>
+                     
+                                 <div class="form-group">
+                                     <div class="col-xs-6">
+                                        <label for="mobile"><h4>Mobile</h4></label>
+                                         <input type="text" class="form-control" name="mobile" id="mobile" placeholder="enter mobile number" title="enter your mobile number if any.">
+                                     </div>
+                                 </div>
+                                 <div class="form-group">
+                                     
+                                     <div class="col-xs-6">
+                                         <label for="email"><h4>Email</h4></label>
+                                         <input type="email" class="form-control" name="email" id="email" placeholder="you@email.com" title="enter your email.">
+                                     </div>
+                                 </div>
+                                 <div class="form-group">
+                                     
+                                     <div class="col-xs-6">
+                                         <label for="email"><h4>Location</h4></label>
+                                         <input type="email" class="form-control" id="location" placeholder="somewhere" title="enter a location">
+                                     </div>
+                                 </div>
+                                 <div class="form-group">
+                                     
+                                     <div class="col-xs-6">
+                                         <label for="password"><h4>Password</h4></label>
+                                         <input type="password" class="form-control" name="password" id="password" placeholder="password" title="enter your password.">
+                                     </div>
+                                 </div>
+                                 <div class="form-group">
+                                     
+                                     <div class="col-xs-6">
+                                       <label for="password2"><h4>Verify</h4></label>
+                                         <input type="password" class="form-control" name="password2" id="password2" placeholder="password2" title="enter your password2.">
+                                     </div>
+                                 </div>
+                                 <div class="form-group">
+                                      <div class="col-xs-12">
+                                           <br>
+                                             <button class="btn btn-lg btn-success" type="submit"><i class="glyphicon glyphicon-ok-sign"></i> Save</button>
+                                              <button class="btn btn-lg" type="reset"><i class="glyphicon glyphicon-repeat"></i> Reset</button>
+                                       </div>
+                                 </div>
+                             </form>
+                    </div> 
+                      </div><!--/tab-pane-->
+                  </div><!--/tab-content-->
+        
+                </div><!--/col-9-->
+        </div><!--/row-->
+      
+    
+
+
+
+
+
+    
+</body>
+</html>

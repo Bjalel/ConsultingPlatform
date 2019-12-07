@@ -1,0 +1,63 @@
+[
+    { 
+         "name" : "Houssem",
+        "mail" : "jhoussemm@gamil.com",
+         "job" : "full_stack" ,
+        "age"  : "24" ,
+        "imageName" : "hsm.jpg",
+        "bio" : "my name is houssem"
+
+    },
+    { 
+        "name" : "jalel",
+        "mail" : "bouchelliga",
+         "job" : "full_stack" ,
+        "age"  : "22"    ,
+        "imageName" : "user1.png",
+        "bio" : "my name is jalel"
+
+
+    },
+    { 
+        "name" : "jalel",
+        "mail" : "bouchelliga",
+         "job" : "full_stack" ,
+        "age"  : "22"    ,
+        "imageName" : "user1.png",
+        "bio" : "my name is jalel"
+
+
+    },
+    
+    {
+         "name" : "Houssem",
+        "mail" : "jhoussemm@gamil.com",
+         "job" : "full_stack" ,
+        "age"  : "24" ,
+        "imageName" : "user2.jpg",
+        "bio" : "s"
+
+
+    },
+    { 
+        "name" : "jalel",
+        "mail" : "bouchelliga",
+         "job" : "full_stack" ,
+        "age"  : "22"    ,
+        "imageName" : "user1.png",
+        "bio" : "my name is jalel"
+
+
+    },
+    { 
+        "name" : "jalel",
+        "mail" : "bouchelliga",
+         "job" : "full_stack" ,
+        "age"  : "22"    ,
+        "imageName" : "user1.png",
+        "bio" : "my name is jalel"
+
+
+    }
+  
+  ]

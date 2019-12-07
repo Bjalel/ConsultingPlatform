@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  <script src="js/app.js"></script>
+
+  
+
+  <script>
+    function validate()
+    {
+      var a=documents.forms["formulaire"]["pwd"].value;
+      var b=documents.forms["formulaire"]["pwd1"].value;
+      if(!(a==b))
+      {
+        alert("both passwords are not matching");
+        return false;
+      }
+      return true;
+    }
+        </script>
+
+
+
+
+</head>
+
+<body ng-app="aa" >
+
+    <div class="container bootstrap snippet" style="margin-top:-20px;margin-left: 250px" >
+
+
+  <div class="col-sm-9">
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark" style="background-color: #B31919 !important">
+
+        <ul class="navbar-nav" id="myTab" >
+            <li class="nav-item"><a href="#liste" class="nav-link" style="color: #ffffff ;font-family: 'Agency FB Bold', arial ;padding-left:150px" data-toggle="tab">Liste des Clients </a></li>
+          <li class="nav-item"><a href="#supprimer" class="nav-link" style="color: #ffffff ;font-family: 'Agency FB Bold', arial ;padding-left:10px " data-toggle="tab">Supprimer un client </a></li>
+
+        </ul>
+     
+      </nav>
+
+
+        <div class="tab-content">
+                <div class="tab-pane active" id="liste" >
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <table class="table table-striped table-hover" ng-controller="Control" >
+                        <thead>
+                            <tr>
+                                <th>id</th>
+                                <th>nom</th>
+                                <th>prenom</th>
+                                <th>Email</th>
+                                <th>date de naissance</th>
+                                <th>tel</th>
+                                <th>login</th>
+                                <th>mdp</th>
+
+                            </tr>
+                        </thead>
+
+                        <tbody>
+
+                       <tr  ng-repeat="item in expert">
+
+                              <td>{{item.id_clt}}</td>
+                              <td>{{item.nom_clt}}</td>
+                              <td>{{item.prenom_clt}}</td>
+                              <td>{{item.date_naiss}}</td>
+                              <td>{{item.mail_clt}}</td>
+                              <td>{{item.tel_clt}}</td>
+                              <td>{{item.login_clt}}</td>
+                              <td>{{item.pwd_clt}}</td>
+
+
+                       </tr>
+                    
+
+                        </tbody>
+                    </table>
+
+                </div>
+
+                <div class="tab-pane" id="supprimer">
+                    
+                    <form >
+                        <div class="form-row" style="margin-left: 230px" ng-controller="Control1">
+                          <div class="form-group col-md-6">
+                            <label for="inputEmail4">Donner l'ID de Client à Supprimer : </label>
+                         
+                          
+                            <input type="text" class="form-control" id="inputEmail4" placeholder="ID Expert" >
+                            <button type="submit" class="btn btn-dark" style="font-family: 'Agency FB Bold' " >Supprimer</button>
+                             </div>
+                             
+                         </div>
+                            
+                          
+                          
+                    </form>
+
+        </div>
+
+                
+        </div>
+
+
+  </div>
+  </div>
+ 
+
+ 
+
+</body>
+
+</html>

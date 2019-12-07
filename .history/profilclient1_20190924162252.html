@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html ng-app="myApp" lang="en" >
+<head>
+        <title>profileClient</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+
+
+        <style>
+          .container0{
+              display: grid ;
+              grid-template-columns: auto auto auto auto;     
+              grid-gap: 5mm;
+          }
+        </style>
+    <script src="rout.js"> </script>
+
+</head>
+<body >
+
+                <nav class="navbar navbar-expand-sm bg-dark navbar-dark" >
+        
+                <ul class="navbar-nav" id="myTab" >
+                    <li class="nav-item"><a href="#11" class="nav-link" style="color: #ffffff ;font-family: 'Agency FB Bold', arial ;padding-left:150px" data-toggle="tab">acceuil </a></li>
+                  <li class="nav-item"><a href="#12" class="nav-link" style="color: #ffffff ;font-family: 'Agency FB Bold', arial ;padding-left:10px " data-toggle="tab">messagerie</a></li>
+        
+                  <li class="nav-item"><a href="#13" class="nav-link" style="color: #ffffff ;font-family: 'Agency FB Bold', arial ;padding-left:10px" data-toggle="tab">contact admin</a></li>
+                  <li class="nav-item"><a href="#supprimer" class="nav-link" style="color: #ffffff ;font-family: 'Agency FB Bold', arial ;padding-left:10px" data-toggle="tab">deconnectio</a></li>
+                </ul>
+             
+              </nav>
+
+
+              
+
+
+                    <!-- left SIDEBAR-->
+              
+                        <div class="row">
+                              <div class="col-sm-3"><!--left col-->
+                                  <h2 style="text-align:center" >Profile Card</h2>
+                            
+                                            <div class="card" >
+                                              <img ng-src="img/{{item.imageName}}"alt="{{item.imageName}}"  width="200" height="300" class="img-responsive img-circle">
+                                              <h1>{{item.name}}</h1>
+                                              <p class="title">CEO & Founder, Example</p>
+                                              <p>Harvard University</p>
+                                              <div style="margin: 24px 0;">
+                                              <a href="#settings" data-toggle="tab">Modifier profil</a>    
+                                            </div>
+                            
+                                         </div>
+                                                   
+                                               
+                                </div><!--/demandes-->
+
+                      <div class="col-sm-9">
+                            
+                                    
+                   <div class="tab-content">
+                      <div class="tab-pane active" id="11">
+                      <!--contenue page 1 -->   
+                                
+
+                                    <ul class="nav nav-tabs" id="myTab">
+                                        <li class="active"><a href="#1" data-toggle="tab">All</a></li>
+                                        <li><a href="#2" data-toggle="tab">nutrition</a></li>
+                                        <li><a href="#3" data-toggle="tab">droit</a></li>
+                                    </ul>
+
+
+                             <div class="tab-content">
+
+                                        <div class="tab-pane active" id="1">    
+                                        <p>hi</p>
+                                        </div>
+                                        <div class="tab-pane " id="2">    
+                                        <p>hello</p>
+                                        </div>
+                                        <div class="tab-pane " id="3">   
+                                        <p>cv</p> 
+                                        </div>
+
+                            </div>
+                        </div>
+
+                        <div class="tab-pane " id="12">   
+                        <p> aaychek</p>
+                        </div>
+
+                        <div class="tab-pane " id="13">    
+                        <p> ya raab</p>
+                        </div>
+            
+
+
+
+
+                              </div>
+
+
+
+                              </body>
+                              </html>

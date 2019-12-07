@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html ng-app="myApp" lang="en" >
+<head>
+        <title>profileClient</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+
+
+
+        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular-route.js"></script>
+
+        <style>
+                .card {
+                  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+                  max-width: 300px;
+                  margin: auto;
+                  text-align: center;
+                  font-family: arial;
+                }
+                
+                .title {
+                  color: grey;
+                  font-size: 18px;
+                }
+                
+                button {
+                  border: none;
+                  outline: 0;
+                  display: inline-block;
+                  padding: 8px;
+                  color: white;
+                  background-color: #000;
+                  text-align: center;
+                  cursor: pointer;
+                  width: 100%;
+                  font-size: 18px;
+                }
+                
+                a {
+                  text-decoration: none;
+                  font-size: 22px;
+                  color: black;
+                }
+                
+                button:hover, a:hover {
+                  opacity: 0.7;
+                }
+                .grid-container {
+                    display: grid;
+                    grid-template-columns: auto auto auto;
+                    padding: 100px;
+                    grid-gap: 5mm;
+                }
+        
+                .grid-item {
+                    
+                   
+                    padding: 20px;
+                    font-size: 30px;
+                    text-align: center;
+                    
+                }
+                .grid-footer {
+                    background-color: rgba(255, 255, 255, 0.8);
+                    border: 1px solid rgba(0, 0, 0, 0.8);
+        
+                    font-size: 30px;
+                    text-align: center;
+                    
+                }
+        
+                </style>
+
+<style>
+        .card {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          max-width: 300px;
+          margin: auto;
+          text-align: center;
+          font-family: arial;
+        }
+        
+        .title {
+          columns: #000000;;
+          font-size: 18px;
+          font-family: 'Agency FB Bold', arial ;
+        }
+      .button {
+        border: none;
+        outline: 0;
+        display: inline-block;
+        padding: 8px;
+        color: white;
+        text-align: center;
+        cursor: pointer;
+        width: 100%;
+        font-size: 22px;
+        margin-top: -20px;
+        font-family: 'Agency FB Bold', arial ;
+      }
+      
+      a {
+        text-decoration: none;
+        font-size: 22px;
+        color: black;
+      }
+      
+      button:hover, a:hover {
+        opacity: 0.7;
+      }
+      </style>
+    <script src="rout.js"> </script>
+
+</head>
+<body ng-app="aa" >
+
+                <nav class="navbar navbar-expand-sm bg-dark navbar-dark" >
+        
+                <ul class="navbar-nav" id="myTab" >
+                    <li class="nav-item"><a href="#11" class="nav-link" style="color: #ffffff ;font-family: 'Agency FB Bold', arial ;padding-left:150px" data-toggle="tab">acceuil </a></li>
+                  <li class="nav-item"><a href="#12" class="nav-link" style="color: #ffffff ;font-family: 'Agency FB Bold', arial ;padding-left:10px " data-toggle="tab">messagerie</a></li>
+        
+                  <li class="nav-item"><a href="#13" class="nav-link" style="color: #ffffff ;font-family: 'Agency FB Bold', arial ;padding-left:10px" data-toggle="tab">contact admin</a></li>
+                  <li class="nav-item"><a href="#supprimer" class="nav-link" style="color: #ffffff ;font-family: 'Agency FB Bold', arial ;padding-left:10px" data-toggle="tab">deconnectio</a></li>
+                </ul>
+             
+              </nav>
+
+
+              
+
+
+                <div class="container">
+              
+                   <div class="row">
+                              <div class="col-sm-3"><!--left col-->
+                                  <h2 style="text-align:center" >Profile Card</h2>
+                            
+                                            <div class="card" >
+                                              <img ng-src="img/{{item.imageName}}"alt="{{item.imageName}}"  width="200" height="300" class="img-responsive img-circle">
+                                              <h1>{{item.name}}</h1>
+                                              <p class="title">CEO & Founder, Example</p>
+                                              <p>Harvard University</p>
+                                              <div style="margin: 24px 0;">
+                                              <a href="#settings" data-toggle="tab">Modifier profil</a>    
+                                            </div>
+                            
+                                         </div>
+                                                   
+                                               
+                                </div><!--/demandes-->
+
+                                 <div class="col-sm-9">
+                            
+                                    
+                              <div class="tab-content">
+                      <div class="tab-pane active" id="11">
+                      <!--contenue page 1 -->   
+                                
+
+                                    <ul class="nav nav-tabs" id="myTab">
+                                        <li class="active"><a href="#1" data-toggle="tab">All</a></li>
+                                        <li><a href="#2" data-toggle="tab">nutrition</a></li>
+                                        <li><a href="#3" data-toggle="tab">droit</a></li>
+                                    </ul>
+
+
+                             <div class="tab-content">
+
+                                        <div class="tab-pane active" id="1">    
+                                                <div class="grid-container" ng-controller="Control">
+                                                        <div class="grid-item" ng-repeat="item in expert  ">
+                                                      <div class="card">
+                                                        
+                                                        <img  src="img/{{item.id_expert}}.jpg" alt="John" style="width:100%" >
+                                                        
+                                                        <h3  style="font-family: 'Agency FB Bold', arial ;font-size: 35px"><b>{{item.pre_exp}} {{item.nom_exp}}</b></h3>
+                                                        
+                                                        <p class="title">Domaine: {{item.domaine}}</p>
+                                                        <p class="title">Spécialisé en Nutrition</p>
+                                                      
+                                                        <p><a href="#MyModal" data-toggle="modal" class="button" style="background-color:#B31919 " >Contact</a></p>
+                                                      </div>
+                                                      
+                                                      
+                                                      </div>
+                                                      </div>
+                                        </div>
+                                        <div class="tab-pane " id="2">    
+                                                <div class="grid-container" ng-controller="Control">
+                                                        <div class="grid-item" ng-repeat="item in expert | filter: 'droit' ">
+                                                      <div class="card">
+                                                        
+                                                        <img  src="img/{{item.id_expert}}.jpg" alt="John" style="width:100%" >
+                                                        
+                                                        <h3  style="font-family: 'Agency FB Bold', arial ;font-size: 35px"><b>{{item.pre_exp}} {{item.nom_exp}}</b></h3>
+                                                        
+                                                        <p class="title">Domaine: {{item.domaine}}</p>
+                                                        <p class="title">Spécialisé en Nutrition</p>
+                                                      
+                                                        <p><a href="#MyModal" data-toggle="modal" class="button" style="background-color:#B31919 " >Contact</a></p>
+                                                      </div>
+                                                      
+                                                      
+                                                      </div>
+                                                      </div>
+                                        </div>
+                                        <div class="tab-pane " id="3">   
+                                                <div class="grid-container" ng-controller="Control">
+                                                        <div class="grid-item" ng-repeat="item in expert | filter: 'nutrition' ">
+                                                      <div class="card">
+                                                        
+                                                        <img  src="img/{{item.id_expert}}.jpg" alt="John" style="width:100%" >
+                                                        
+                                                        <h3  style="font-family: 'Agency FB Bold', arial ;font-size: 35px"><b>{{item.pre_exp}} {{item.nom_exp}}</b></h3>
+                                                        
+                                                        <p class="title">Domaine: {{item.domaine}}</p>
+                                                        <p class="title">Spécialisé en Nutrition</p>
+                                                      
+                                                        <p><a href="#MyModal" data-toggle="modal" class="button" style="background-color:#B31919 " >Contact</a></p>
+                                                      </div>
+                                                      
+                                                      
+                                                      </div>
+                                                      </div>
+                                        </div>
+
+                            </div>
+                        </div>
+
+                        <div class="tab-pane " id="12">   
+                        <p> aaychek</p>
+                        </div>
+
+                        <div class="tab-pane " id="13">    
+                        <p> ya raab</p>
+                        </div>
+            
+
+
+
+
+                                 </div>
+
+                              </div>
+                    </div>
+                </div>
+                              
+
+
+
+
+
+
+
+  </body>
+</html>

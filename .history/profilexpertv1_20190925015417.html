@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+        <title>profileClient</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular-route.js"></script>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+        <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+        
+        <link href="http://fr.allfont.net/allfont.css?fonts=agency-fb-bold" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+
+        <div class="container bootstrap snippet" style="margin-top:20px" >
+          
+                <div class="row">
+                      <div class="col-sm-3"><!--left col-->
+                          
+                        
+
+                        <div class="card">
+                          <img src="img/hsm.jpg" alt="John" style="width:100%">
+                          <h1>houssem jraidi</h1>
+                          <p class="title">CEO & Founder, Example</p>
+                          <p>Harvard University</p>
+
+                          <p><button align:center>Modifier Profil</button></p>
+                        </div>
+                      
+                      
+                    </div><!--/col-3-->
+                    <div class="col-sm-9">
+                      
+                      <ul class="nav nav-tabs" id="myTab">
+                        <li> <a href="#messages" data-toggle="tab">Gérer les demandes</a></li>
+                        <li><a href="#demandes" data-toggle="tab">Gérer les dossiers</a></li>
+                        <li><a href="#settings" data-toggle="tab">Modifier profil</a></li>
+                      </ul>
+                      <div class="tab-content">
+                    <!-- show on screen-->
+                      <div class="tab-pane active" id="">
+                      <div id=''></div>
+                      </div>
+                      <!-------   ------>
+                      
+                      
+                      <div class="row">
+                            <div class="col-md-4 col-md-offset-4 text-center">
+                                <ul class="pagination" id="myPager"></ul>
+                            </div>
+                          </div>
+                           
+                         <div class="tab-pane" id="messages">
+                           
+                                <table class="table">
+                                        <thead class="thead-dark">
+                                          <tr>
+                                            <th scope="col">Nom de client</th>
+                                            <th scope="col">Sujet</th>
+                                            <th scope="col"> Date </th>
+                                            <th scope="col">  </th>
+                                          </tr>
+                                        </thead>
+                                        <tbody >
+                                          <tr ng-repeat="item in forum">
+                                            <th scope="row">{{item.nom}}</th>
+                                            <td>{{item.sujet}}</td>
+                                            <td>8-7-2019</td>
+                                            <td> <button class="btn-success"> Répondre </button> </td>
+         
+                                          </tr>
+                                         
+                                            
+                                        </tbody>
+                                      </table>
+                                      
+                                        </tbody>
+                                      </table>
+                         </div><!--/tab-pane-->
+                         <div class="tab-pane" id="demandes">
+                           <h2> Dossiers </h2>
+                                <br>
+                                <table class="table">
+                                        <thead class="thead-dark">
+                                          <tr>
+                                            <th scope="col">Nom de client </th>
+                                            <th scope="col"> Sujet </th>
+                                            <th scope="col">      </th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <th scope="row">Muhammad nasri</th>
+                                            <td>Contrat de voiture</td>
+                                            
+                                            <td> <button class="btn-success"> Détails</button> </td>
+                                          </tr>
+                                          <tr>
+                                            <th scope="row">Jalel Bouchelliga</th>
+                                            <td>blanchiment d'argent</td>
+                                      
+                                            <td> <button class="btn-success"> Détails </button> </td>
+                                          </tr>
+                                          <tr>
+                                            <th scope="row">Hussam Jraidi</th>
+                                            <td> bla bla </td>
+                                            <td> <button class="btn-success"> Détails</button> </td>
+                                           
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                      
+                                        </tbody>
+                                      </table>
+                                
+                              </div><!--/tab-pane-->
+                         <div class="tab-pane" id="settings">
+                                
+                               
+                              <hr>
+                              <form >
+                                    <div class="form-row">
+                                      <div class="form-group col-md-6">
+                                        <label for="inputEmail4">Nom</label>
+                                        <input type="text" class="form-control" name="nom" placeholder="Nom" required required data-errormessage-value-missing="Please input something">
+                                      </div>
+                                      <div class="form-group col-md-6">
+                                        <label for="inputPassword4">Prénom</label>
+                                        <input type="text" class="form-control" name="prenom"  placeholder="Prénom" required required required data-errormessage-value-missing="Please input something">
+                                      </div>
+                                    </div>
+                
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                          <label for="inputEmail4">Numéro de Télèphone</label>
+                                          <input type="text" class="form-control" name="tel"  placeholder="Numéro de Télèphone" required required required data-errormessage-value-missing="Please input something">
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                          <label for="inputPassword4">Adresse mail</label>
+                                          <input type="email" class="form-control" name="mail"  placeholder="Adresse mail" required required required data-errormessage-value-missing="Please input something">
+                                        </div>
+                                      </div>
+                
+                                      <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                          <label for="inputEmail4">Mot de Passe</label>
+                                          <input type="password" class="form-control" name="pwd" id="pwd" placeholder="Mot de Passe" required required required data-errormessage-value-missing="Please input something">
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                          <label for="inputPassword4">Confirmer Mot de Passe</label>
+                                          <input type="password" class="form-control" name="pwd1" id="pwd1" placeholder="Confirmer Mot de Passe" required required required data-errormessage-value-missing="Please input something">
+                                        </div>
+                                      </div>
+                
+                                      <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                          <label for="inputEmail4">Login</label>
+                                          <input type="text" class="form-control" name="login" placeholder="Login" required required required data-errormessage-value-missing="Please input something">
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                          <label for="inputPassword4">Image</label>
+                                           <div class="form-group">
+                                            <input type="file" class="form-control-file">
+                                          </div>
+                                        </div>
+                                      </div>
+                
+                
+                
+                
+                                    <button type="submit" class="btn btn-dark" style="font-family: 'Agency FB Bold' "  >Enregistrer</button>
+                                  </form>
+                          </div>
+                           
+                          </div><!--/tab-pane-->
+                      </div><!--/tab-content-->
+            
+                    </div><!--/col-9-->
+        </div><!--/row--> 
+</body>
